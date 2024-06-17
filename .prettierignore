@@ -1,0 +1,7 @@
+node_modules/
+build/
+package.json
+package-lock.json
+internals/generators/
+internals/scripts/
+src/vite-env.d.ts
