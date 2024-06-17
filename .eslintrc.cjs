@@ -20,6 +20,12 @@ module.exports = {
     'no-duplicate-imports': 'error',
     'array-callback-return': 'error',
     '@typescript-eslint/array-type': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
 
     // Deprecated from eslint
     '@stylistic/semi': ['error', 'always'],
