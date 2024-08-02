@@ -5,7 +5,7 @@ import { Button } from '@/components/ui';
 function App() {
   return (
     <div>
-      <h1>Shadi solution portal ui</h1>
+      <h1>Shadi solution portal ui working with docker and kubernetes</h1>
       <Wrapper />
       <Badge variant={'secondary'}>I am Badge</Badge>
       <Button variant={'outline'} size={'sm'}>
