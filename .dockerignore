@@ -1,0 +1,35 @@
+# Node modules directory
+node_modules
+npm-debug.log
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Build artifacts
+dist
+build
+
+# docker related files
+.dockerignore
+Dockerfile*
+docker-compose*
+
+# Git files
+.git
+.gitignore
+
+# IDE/editor specific files
+.vscode
+.idea
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# ignore all script file
+.sh
+
+README.md
