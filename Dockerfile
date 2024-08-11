@@ -17,16 +17,22 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve the application using a lightweight web server
-FROM nginx:alpine
+FROM nginx:1.27.0-alpine
+
+# Create and set the final build working directory
+WORKDIR /usr/share/nginx/html
+
+# Remove every thing from / dir
+RUN rm -rf ./*
 
 # Copy the build output from the previous stage
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/ ./
 
 # Copy custom nginx configuration (if needed)
-# COPY nginx.conf /etc/nginx/nginx.conf
+COPY /src/config/nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
 
 # Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
